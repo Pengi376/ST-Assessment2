@@ -1,0 +1,21 @@
+$ python smartcare_v01.py
+Welcome to SmartCare: Community Clinic Appointment Booking System!
+Patient: Alice Smith | Practitioner: Dr. John Doe | Time: 2024-07-20 10:00 AM
+Patient: Bob Johnson | Practitioner: Dr. Jane Roe | Time: 2024-07-20 11:30 AM
+
+$ python -m pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/claude/repo/Week4/stage01
+collecting ... collected 7 items
+
+test_smartcare_v01.py::test_normal_appointment_is_stored PASSED          [ 14%]
+test_smartcare_v01.py::test_blank_or_none_patient_rejected[] PASSED      [ 28%]
+test_smartcare_v01.py::test_blank_or_none_patient_rejected[   ] PASSED   [ 42%]
+test_smartcare_v01.py::test_blank_or_none_patient_rejected[None] PASSED  [ 57%]
+test_smartcare_v01.py::test_none_appointment_time_rejected PASSED        [ 71%]
+test_smartcare_v01.py::test_none_practitioner_rejected PASSED            [ 85%]
+test_smartcare_v01.py::test_same_practitioner_and_time_is_STILL_accepted_known_limitation PASSED [100%]
+
+============================== 7 passed in 0.01s ===============================
