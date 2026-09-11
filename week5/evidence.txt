@@ -1,0 +1,19 @@
+$ python smartcare_v02.py
+Rejected: Practitioner already booked at that time
+[{'id': 'A1', 'patient_id': 'P1', 'practitioner': 'Dr. John Doe', 'time': '2026-10-08 10:00', 'status': 'CANCELLED'}]
+
+$ python -m pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/claude/repo/Week5/stage02
+collecting ... collected 6 items
+
+test_acceptance_criteria.py::test_AC01_valid_booking_is_scheduled PASSED [ 16%]
+test_acceptance_criteria.py::test_AC02_conflicting_booking_rejected_and_existing_unchanged PASSED [ 33%]
+test_acceptance_criteria.py::test_AC03_cancel_keeps_appointment_in_history PASSED [ 50%]
+test_acceptance_criteria.py::test_AC04_cancelling_twice_is_rejected PASSED [ 66%]
+test_acceptance_criteria.py::test_AC05_patient_search_found_and_not_found PASSED [ 83%]
+test_acceptance_criteria.py::test_AC06_cancelled_slot_can_be_rebooked PASSED [100%]
+
+============================== 6 passed in 0.01s ===============================
