@@ -1,0 +1,15 @@
+$ python -m pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/claude/repo/Week6/stage03
+collecting ... collected 6 items
+
+test_model_consistency.py::test_every_uml_class_exists_with_the_right_attributes PASSED [ 16%]
+test_model_consistency.py::test_every_uml_operation_exists PASSED        [ 33%]
+test_model_consistency.py::test_status_enum_matches_uml PASSED           [ 50%]
+test_model_consistency.py::test_associations_hold_domain_objects_not_ids PASSED [ 66%]
+test_model_consistency.py::test_no_infrastructure_in_the_domain_skeleton PASSED [ 83%]
+test_model_consistency.py::test_behaviour_is_deliberately_not_implemented_yet PASSED [100%]
+
+============================== 6 passed in 0.01s ===============================
