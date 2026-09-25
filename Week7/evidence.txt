@@ -1,0 +1,25 @@
+$ python -m pytest -v
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/claude/repo/Week7/stage04
+collecting ... collected 16 items
+
+tests/test_domain.py::test_valid_objects_are_created PASSED              [  6%]
+tests/test_domain.py::test_text_is_trimmed PASSED                        [ 12%]
+tests/test_domain.py::test_invalid_patient_rejected[-Alice] PASSED       [ 18%]
+tests/test_domain.py::test_invalid_patient_rejected[P1-] PASSED          [ 25%]
+tests/test_domain.py::test_invalid_patient_rejected[  -Alice] PASSED     [ 31%]
+tests/test_domain.py::test_invalid_patient_rejected[None-Alice] PASSED   [ 37%]
+tests/test_domain.py::test_invalid_patient_rejected[P1-None] PASSED      [ 43%]
+tests/test_domain.py::test_invalid_practitioner_rejected[args0] PASSED   [ 50%]
+tests/test_domain.py::test_invalid_practitioner_rejected[args1] PASSED   [ 56%]
+tests/test_domain.py::test_invalid_practitioner_rejected[args2] PASSED   [ 62%]
+tests/test_domain.py::test_invalid_practitioner_rejected[args3] PASSED   [ 68%]
+tests/test_domain.py::test_appointment_requires_domain_objects_and_datetime PASSED [ 75%]
+tests/test_domain.py::test_cancel_scheduled_appointment PASSED           [ 81%]
+tests/test_domain.py::test_repeated_cancel_is_illegal_transition PASSED  [ 87%]
+tests/test_domain.py::test_status_cannot_be_assigned_from_outside PASSED [ 93%]
+tests/test_domain.py::test_patient_is_immutable PASSED                   [100%]
+
+============================== 16 passed in 0.02s ==============================
