@@ -1,0 +1,29 @@
+"""Repository CONTRACTS (abstractions) used by the service layer.
+
+Deliberately small (ISP): only what the current use cases need. Several tiny
+Protocols instead of one 20-method interface.
+"""
+from __future__ import annotations
+from datetime import datetime
+from typing import Protocol
+
+from ..domain import Appointment, Patient, Practitioner
+
+
+class PatientRepository(Protocol):
+    def save(self, patient: Patient) -> None: ...
+    def find_by_id(self, patient_id: str) -> Patient | None: ...
+
+
+class PractitionerRepository(Protocol):
+    def save(self, practitioner: Practitioner) -> None: ...
+    def find_by_id(self, practitioner_id: str) -> Practitioner | None: ...
+
+
+class AppointmentRepository(Protocol):
+    def save(self, appointment: Appointment) -> None: ...
+    def find_by_id(self, appointment_id: str) -> Appointment | None: ...
+    def find_scheduled_by_practitioner_and_time(
+        self, practitioner_id: str, scheduled_at: datetime) -> Appointment | None: ...
+    def list_by_practitioner(self, practitioner_id: str) -> list[Appointment]: ...
+    def list_by_patient(self, patient_id: str) -> list[Appointment]: ...
